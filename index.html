@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="shortcut icon" href="./statics/media/img/icon.png" type="image/png">
+    <link rel="stylesheet" href="./libs/bootstrap-5.3.0-alpha3-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./statics/styles/index.css">
+</head>
+
+<body>
+    <div class="modal" id="alertForm" tabindex="-1" style="display:none;">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Error</h5>
+                    <button type="button" class="btn-close" id="btnAlertForm"></button>
+                </div>
+                <div class="modal-body">
+                    <p id="modalText"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg sticky-top mb-4">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="./statics/media/img/icon.png" alt="Lista" width="30" height="24"
+                    class="d-inline-block align-text-top">
+                To-Do List
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#formulario">Formulario</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Tareas">Tareas</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="container my-3 p-4" id="contPrincipal">
+            <div class="row">
+                <!-- Formulario -->
+                <div class="col-12 col-md-4 mb-5 mb-md-0">
+                    <section id="formulario">
+                        <h1 class="h1">Ingresa nueva tarea</h1>
+                        <form id="formT">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="tarea" name="tarea" autocomplete="off"
+                                    placeholder="Ingresa nueva tarea" required aria-labelledby="tareaHelpBlock">
+                                <label for="cancion" class="form-label">Tarea</label>
+                                <div id="tareaHelpBlock" class="form-text">
+                                    No se pueden repetir tareas
+                                </div>
+                            </div>
+                            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example"
+                                name="materia" id="materia">
+                                <option value="MATERIA">Materia</option>
+                                <option value="OTRA">Otra</option>
+                            </select>
+                            <div class="form-floating mb-3" id="divNuevaM">
+                                <input type="text" class="form-control" id="inputNuevaM" name="inputNuevaM"
+                                    autocomplete="off" placeholder="Ingresa nueva materia" required
+                                    aria-labelledby="materiaHelpBlock">
+                                <label for="inputNuevaM" class="form-label">Materia</label>
+                                <div id="materiaHelpBlock" class="form-text">
+                                    No se pueden repetir materias
+                                </div>
+                            </div>
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-success" type="submit" id="btnAgregar">Agregar</button>
+                                <button class="btn btn-light" type="reset" id="btnLimpiar">Limpiar</button>
+                            </div>
+                        </form>
+                    </section>
+                </div>
+                <div class="col-12 col-md-8 d-flex flex-column justify-content-center">
+                    <section id="Tareas">
+                        <h1 class="display-1 text-center">Lista de tareas</h1>
+                        <!-- Lista -->
+                        <span class="fs-4" id="contadorT"></span>
+                        <div class="d-flex flex-column gap-3" id="contLista">
+                            <div class="alert alert-danger d-flex justify-content-center my-3 p-5 rounded" id="alert"
+                                role="alert">
+                                <span class="fs-3 text-center">No hay tareas</span>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="./dynamics/JS/index.js"></script>
+    <script src="./libs/bootstrap-5.3.0-alpha3-dist/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

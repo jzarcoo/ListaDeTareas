@@ -1,0 +1,44 @@
+body{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+}
+main{
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+}
+nav{
+    min-height: 10vh;
+    background-color: #ffffff;
+    box-shadow: 0 1rem 1rem 5px #000000;
+}
+.homeworks{
+    background-color: #00d4ff;
+}
+.completada{
+    background-color: #090979;
+}
+.completada #completed{
+    color: #ffffff;
+    background-color: #198754 !important;
+}
+#contPrincipal{
+    background-color: #ffffff;
+}
+.botones{
+    color: #ffffff;
+}
+.hidden{
+    display: none !important;
+}
+#divNuevaM{
+    display: none;
+}
+#completed:hover,#up:hover,#down:hover{
+    background-color: #708090 !important;
+}
+#delete:hover{
+    background-color: #ff0000 !important;
+}
